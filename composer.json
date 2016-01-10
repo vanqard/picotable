@@ -1,0 +1,22 @@
+{
+    "name": "vanqard/picotable",
+    "description": "A small library to connect objects to db rows for rapid prototyping",
+    "license": "MIT",
+    "keywords": "Table gateway",
+    "homepage": "https://phpbrilliance.com",
+    "authors": [
+        {
+            "name": "Thunder Raven-Stoker",
+            "email": "thunder@vanqard.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Vanqard\\Picotable\\" : "src/"
+        }
+    }
+}
