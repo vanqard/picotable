@@ -12,18 +12,18 @@ use Vanqard\Picotable\Adapter\AbstractAdapter;
  */
 class SQLite extends AbstractAdapter
 {
-	const SCHEMA_FIELD_NAME = 'name';
-	const SCHEMA_TYPE_NAME = 'type';
-	const SCHEMA_DESCRIBE_QUERY = 'PRAGMA table_info(%s)';
-	
-	/**
-	 * Determines whether field is a primary key column
-	 * 
-	 * @param array $fieldSpec
-	 * @return bool
-	 */
-	protected function isFieldPrimaryKey($fieldSpec)
-	{
-		return (bool) $fieldSpec['pk'];
-	}
+    const SCHEMA_FIELD_NAME = 'name';
+    const SCHEMA_TYPE_NAME = 'type';
+    const SCHEMA_DESCRIBE_QUERY = 'PRAGMA table_info(%s)';
+    
+    /**
+     * Determines whether field is a primary key column
+     * 
+     * @param array $fieldSpec
+     * @return bool
+     */
+    protected function isFieldPrimaryKey($fieldSpec)
+    {
+        return (bool) $fieldSpec['pk'];
+    }
 }

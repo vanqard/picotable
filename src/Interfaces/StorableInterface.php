@@ -11,20 +11,20 @@ namespace Vanqard\Picotable\Interfaces;
  */
 interface StorableInterface
 {
-	/**
-	 * Provides a mechanism to load object properties from a database table
-	 * 
-	 * @param integer|mixed $pk - expects an auto_increment style integer
-	 */
-	public function _load($pk);
-	
-	/**
-	 * Commit the object properties to a database row
-	 */
-	public function _save();
-	
-	/**
-	 * Delete the row that this object corresponds to
-	 */
-	public function _delete();
+    /**
+     * Provides a mechanism to load object properties from a database table
+     * 
+     * @param integer|mixed $pk - expects an auto_increment style integer
+     */
+    public function _load($pk);
+    
+    /**
+     * Commit the object properties to a database row
+     */
+    public function _save();
+    
+    /**
+     * Delete the row that this object corresponds to
+     */
+    public function _delete();
 }

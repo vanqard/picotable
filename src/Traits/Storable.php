@@ -15,48 +15,48 @@ use Vanqard\Picotable\Dto;
  */
 trait Storable
 {
-	/**
-	 * @var \Vanqard\Picotable\Dto
-	 */
-	private $dto;
+    /**
+     * @var \Vanqard\Picotable\Dto
+     */
+    private $dto;
 
-	/**
-	 * Setter for the $dto property
-	 * 
-	 * @param Dto $dto
-	 * @return $this fluent interface
-	 */
-	public function setDto(Dto $dto)
-	{
-		$dto->setConsumer($this);
-		$this->dto = $dto;
-		return $this;
-	}
+    /**
+     * Setter for the $dto property
+     * 
+     * @param Dto $dto
+     * @return $this fluent interface
+     */
+    public function setDto(Dto $dto)
+    {
+        $dto->setConsumer($this);
+        $this->dto = $dto;
+        return $this;
+    }
 
-	/**
-	 * Loads the object properties from the database based on the provided
-	 * primary key value. An integer value is expected but not enforced
-	 * 
-	 * @param integer|mixed $pk
-	 */
-	public function _load($pk)
-	{
-		$this->dto->loadFromDb($pk);
-	}
+    /**
+     * Loads the object properties from the database based on the provided
+     * primary key value. An integer value is expected but not enforced
+     * 
+     * @param integer|mixed $pk
+     */
+    public function _load($pk)
+    {
+        $this->dto->loadFromDb($pk);
+    }
 
-	/**
-	 * Persists the object properties to the connected database table
-	 */
-	public function _save()
-	{
-		$this->dto->saveToDb();
-	}
-	
-	/**
-	 * Removes the database table row that this object is connected to.
-	 */
-	public function _delete()
-	{
-		$this->dto->deleteFromDb();
-	}
+    /**
+     * Persists the object properties to the connected database table
+     */
+    public function _save()
+    {
+        $this->dto->saveToDb();
+    }
+    
+    /**
+     * Removes the database table row that this object is connected to.
+     */
+    public function _delete()
+    {
+        $this->dto->deleteFromDb();
+    }
 }
