@@ -2,7 +2,7 @@
     "name": "vanqard/picotable",
     "description": "A small library to connect objects to db rows for rapid prototyping",
     "license": "MIT",
-    "keywords": "Table gateway",
+    "keywords": ["table gateway","persistence"],
     "homepage": "https://phpbrilliance.com",
     "authors": [
         {
