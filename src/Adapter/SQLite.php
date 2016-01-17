@@ -22,7 +22,7 @@ class SQLite extends AbstractAdapter
      * @param array $fieldSpec
      * @return bool
      */
-    protected function isFieldPrimaryKey($fieldSpec)
+    protected function isFieldPrimaryKey(array $fieldSpec)
     {
         return (bool) $fieldSpec['pk'];
     }

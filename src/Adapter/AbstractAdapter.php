@@ -200,8 +200,6 @@ abstract class AbstractAdapter
         $sql = sprintf(static::SCHEMA_DESCRIBE_QUERY, $this->tableName);
         $stmt = $this->pdo->query($sql);
 
-        $translatedColumns = array_filter(array_keys($map), function($v) { return is_string($v); });
-
         $dbMap = [];
         foreach($map as $property => $column) {
             if (!is_string($property)) {
@@ -232,4 +230,12 @@ abstract class AbstractAdapter
             }
         }
     }
+    
+    /**
+     * Vendor specific table adapters to provide their own isPk test
+     * 
+     * @param array $fieldSpec
+     * @return bool
+     */
+    abstract protected function isFieldPrimaryKey(array $fieldSpec);
 }

@@ -13,6 +13,16 @@ but adding a database connection is a PITA
 
 Not any more! Just add picotable to your prototype and add persistence to your models super quick and easy. 
 
+# Basic premise
+
+Adding persistence to an object can be achieved by:
+
+1. Adding the provided trait to an object's class
+2. Providing the _columnMap array property to the object's class to link object properties to table columns
+3. Passing an instantiated object to the `Connector->connect()` method to link an object to a database table
+4. Utilising the traits `load()`, `save()` and `delete()` methods to perform CRUD-like operations
+
+
 # Installation
 
 Simply use composer to add picotable to your prototype
